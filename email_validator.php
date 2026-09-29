@@ -1,5 +1,10 @@
 <?php
 // Student note: this function validates one email and returns if it is valid + why.
+function escape($value)
+{
+	return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
+
 function validateEmail($email, $strictMode = false)
 {
 	$email = trim((string) $email);
